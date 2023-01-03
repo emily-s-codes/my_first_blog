@@ -1,0 +1,45 @@
+.newMain h2 {
+    font-family: 'Karla-Bold', sans-serif;
+    color: indigo;
+}
+
+.newMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+input {
+    width: 50vw;
+    color: indigo;
+    border: 2px solid indigo;
+    margin: 10px;
+    overflow-wrap: normal;
+}
+
+input[type=file] {
+    border: none;
+}
+
+input:nth-of-type(3) {
+    height: 200px;
+    text-align: top left;
+}
+
+.newMain button {
+    font-family: 'Karla-Regular', sans-serif;
+    color: indigo;
+    background-color: white;
+    border: 2px solid indigo;
+    padding: 10px 20px;
+}
+
+.newMain button:hover {
+    color: white;
+    background-color: indigo;
+}
+
+.newMain button:active {
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}

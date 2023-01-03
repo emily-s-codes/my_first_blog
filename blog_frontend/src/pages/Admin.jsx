@@ -1,10 +1,11 @@
-import NewPost from "../components/NewPost"
+import { Link } from "react-router-dom";
 import "./Admin.css"
 
 const Admin = ({ setPosts }) => {
 
     return (<div className="adminWrapper">
-        <NewPost setPosts={setPosts} />
+        <Link to="/admin/add">Add Post</Link>
+        <Link to="/admin/manage">Manage Posts</Link>
     </div>);
 }
 

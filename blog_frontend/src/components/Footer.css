@@ -1,4 +1,6 @@
 footer {
+
+    /* TO ADD: always at bottom of viewport but only after scroll. pos sticky and fixed don't address the visibility when we haven't scrolled */
     width: 100%;
     display: flex;
     justify-content: center;

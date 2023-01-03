@@ -36,4 +36,8 @@ app.get('/api/blog', (_, res) => {
     res.json(blogPosts)
 })
 
+app.delete('/api/blog', (req, res) => {
+    res.send('DELETE request called')
+})
+
 app.listen(PORT, () => console.log('running on port', PORT))

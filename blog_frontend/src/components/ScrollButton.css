@@ -1,0 +1,11 @@
+.scrollButtonWrapper {
+    position: fixed;
+    text-align: right;
+    width: 100%;
+    bottom: 40px;
+    height: 20px;
+    font-size: 3rem;
+    z-index: 1;
+    cursor: pointer;
+    color: indigo;
+}

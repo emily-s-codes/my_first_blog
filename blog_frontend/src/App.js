@@ -6,6 +6,10 @@ import DetailPage from './pages/DetailPage';
 import Admin from './pages/Admin';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ManagePosts from './pages/ManagePosts';
+import AddPost from './pages/AddPost';
+import AdminNavbar from './components/AdminNavBar';
+import ScrollButton from './components/ScrollButton';
 
 function App() {
 
@@ -19,12 +23,14 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar />
         <Routes>
-          <Route path={"/"} element={<Homepage posts={posts} />} />
-          <Route path={"/blog/:entry"} element={<DetailPage posts={posts} />} />
-          <Route path={"/admin"} element={<Admin setPosts={setPosts} />} />
+          <Route path={"/"} element={<><Navbar /><Homepage posts={posts} /></>} />
+          <Route path={"/blog/:entry"} element={<><Navbar /><DetailPage posts={posts} /></>} />
+          <Route path={"/admin/login"} element={<><AdminNavbar /><Admin setPosts={setPosts} /></>} />
+          <Route path={"/admin/manage"} element={<><AdminNavbar /><ManagePosts posts={posts} setPosts={setPosts} /></>} />
+          <Route path={"/admin/add"} element={<><AdminNavbar /><AddPost setPosts={setPosts} /></>} />
         </Routes>
+        <ScrollButton />
         <Footer />
       </Router>
     </div>

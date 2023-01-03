@@ -1,41 +1,29 @@
-.adminMain h2 {
-    font-family: 'Karla-Bold', sans-serif;
-    color: indigo;
-}
-
-.adminMain {
+.adminWrapper {
+    margin: 0 auto;
+    width: 400px;
+    margin-top: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    text-align: center;
 }
 
-input {
-    width: 50vw;
-    color: indigo;
-    border: 2px solid indigo;
-    margin: 10px;
-    overflow-wrap: normal;
-}
-
-input[type=file] {
-    border: none;
-}
-
-input:nth-of-type(3) {
-    height: 200px;
-    text-align: top left;
-}
-
-.adminMain button {
+.adminWrapper a {
+    text-decoration: none;
     font-family: 'Karla-Regular', sans-serif;
     color: indigo;
     background-color: white;
     border: 2px solid indigo;
-    padding: 10px 20px;
+    padding: 10px 0;
+    width: 170px;
 }
 
-.adminMain button:hover {
-    color: white;
+.adminWrapper a:hover {
+    text-decoration: none;
     background-color: indigo;
+    color: white;
+}
+
+.adminWrapper a:active {
+    box-shadow: inset 0px 0px 5px #c1c1c1;
 }

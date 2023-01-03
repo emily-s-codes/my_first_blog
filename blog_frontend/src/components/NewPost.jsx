@@ -24,10 +24,10 @@ const NewPost = ({ setPosts }) => {
         window.location.href = ('/')
     }
     return (
-        <main className="adminMain">
+        <main className="newMain">
             <h2>New post:</h2>
-            <input type="text" placeholder="post title" name="title" maxlength="20" onChange={(e) => setTitle(e.target.value)} />
-            <input type="text" placeholder="teaser text" name="teaser" maxlength="100" onChange={(e) => setTeaser(e.target.value)} />
+            <input type="text" placeholder="post title" name="title" maxLength="20" onChange={(e) => setTitle(e.target.value)} />
+            <input type="text" placeholder="teaser text" name="teaser" maxLength="100" onChange={(e) => setTeaser(e.target.value)} />
             <input type="textarea" placeholder="post content" name="content" onChange={(e) => setContent(e.target.value)} />
             <input type="file" name="image" onChange={(e) => setImage(e.target.files[0])} />
             <button onClick={submitForm}>Publish</button>
