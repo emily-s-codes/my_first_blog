@@ -6,15 +6,15 @@
 
 @font-face {
   font-family: "Karla-Bold";
-  src: url("../public/assets/fonts/Karla-Bold.ttf");
+  src: url("./assets/fonts/Karla-Bold.ttf");
 }
 
 @font-face {
   font-family: "Karla-Light";
-  src: url("../public/assets/fonts/Karla-Light.ttf");
+  src: url("./assets/fonts/Karla-Light.ttf");
 }
 
 @font-face {
   font-family: "Karla-Regular";
-  src: url("../public/assets/fonts/Karla-Regular.ttf");
+  src: url("./assets/fonts/Karla-Regular.ttf");
 }

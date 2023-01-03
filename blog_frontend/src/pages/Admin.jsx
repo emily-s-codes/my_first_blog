@@ -9,11 +9,15 @@ const Admin = ({ posts, setPosts }) => {
     const [id, setId] = useState((posts.length) + 1)
 
     const submitForm = () => {
+        setId(id + 1)
+        console.log('id', id)
+
         const form = new FormData()
         form.append('title', title)
         form.append('teaser', teaser)
         form.append('content', content)
         form.append('image', image)
+        form.append('id', id)
 
         fetch('http://localhost:9999/blog', {
             method: 'POST',
@@ -22,8 +26,7 @@ const Admin = ({ posts, setPosts }) => {
             .then(response => response.json())
             .then(data => setPosts(data))
 
-        setId(id + 1)
-        console.log(id)
+        window.location.href = ('/')
     }
 
     return (<div className="adminWrapper">

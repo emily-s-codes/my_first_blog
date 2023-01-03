@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import multer from 'multer'
 import morgan from 'morgan'
+import fs from 'fs'
 
 const PORT = 9999
 const app = express()
@@ -12,7 +13,12 @@ app.use(morgan('dev'))
 app.use(cors())
 app.use('/public', express.static('./public'))
 
-const blogPosts = []
+let blogPosts = []
+fs.readFile('./data.js', (err, data) => {
+    if (err) console.log(err)
+    blogPosts = JSON.parse(data)
+})
+
 
 app.post('/blog', upload.single('image'), (req, res) => {
     console.log(req.body)
@@ -24,7 +30,7 @@ app.post('/blog', upload.single('image'), (req, res) => {
         image: req.file.path
     }
     blogPosts.push(blogPost)
-
+    fs.writeFile('./data.js', JSON.stringify(blogPosts), (err) => console.log(err))
     res.json(blogPosts)
 })
 

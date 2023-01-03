@@ -1,19 +1,19 @@
-// import { useEffect, useState } from "react";
-// import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import "./DetailPage.css"
 
 const DetailPage = ({ posts }) => {
-    // const params = useParams()
-    // const [singlePost, setSinglePost] = useState([])
+    const params = useParams()
+    const [singlePost, setSinglePost] = useState([])
 
-    // useEffect(() => {
-    //     console.log(posts)
-    //     setSinglePost(posts[(params.entry) + 1])
-    // }, [params.entry])
+    useEffect(() => {
+        console.log(posts)
+        setSinglePost(posts[(params.entry) + 1])
+    }, [posts, params.entry])
 
-    return (<h1>useParams</h1>
-        // <h1>{props.posts[params.entry].title}</h1>
-    );
+    return (<>
+        <h1>{singlePost.title}</h1>
+    </>);
 }
 
 export default DetailPage;
