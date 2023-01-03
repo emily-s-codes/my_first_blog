@@ -1,8 +1,3 @@
-.homeWrapper {
-    background-color: rgb(228, 243, 234);
-    min-height: 100vh;
-}
-
 .homeMain {
     display: flex;
     flex-direction: column;
@@ -14,32 +9,4 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
-}
-
-.homeHeader {
-    height: 60vh;
-    padding: 20px;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    background-image: url("../img/bg.jpg");
-    background-position: bottom;
-    background-size: cover;
-}
-
-.homeHeader h1 {
-    font-family: 'Karla-Bold', sans-serif;
-    color: aliceblue;
-}
-
-.homeHeader a {
-    display: inline-block;
-    text-align: end;
-    text-decoration: none;
-    font-family: 'Karla-Regular', sans-serif;
-    color: aliceblue;
-}
-
-.homeHeader a:hover {
-    text-decoration: underline;
 }

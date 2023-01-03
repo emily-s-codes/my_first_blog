@@ -1,0 +1,37 @@
+.navbarHeader {
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    background-image: url('../assets/img/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbarHeader h1 {
+    font-family: 'Karla-Bold', sans-serif;
+    color: indigo;
+}
+
+.navbarHeader a {
+    display: inline-block;
+    text-align: end;
+    text-decoration: none;
+    font-family: 'Karla-Regular', sans-serif;
+    color: indigo;
+}
+
+.navbarHeader a:hover {
+    text-decoration: underline;
+}
+
+.navbarHeader .active {
+    text-decoration: underline;
+}
+
+.navbarHeader nav {
+    display: flex;
+    gap: 30px;
+}

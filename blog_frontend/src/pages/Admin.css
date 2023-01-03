@@ -1,48 +1,41 @@
-.adminWrapper {
-    background-color: seagreen;
-    min-height: 100vh;
-}
-
-.adminHeader {
-    padding: 20px;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-}
-
-.adminHeader h1,
-.adminHeader h2,
 .adminMain h2 {
     font-family: 'Karla-Bold', sans-serif;
-    color: aliceblue;
-}
-
-.adminHeader h2 {
-    margin: 20px;
-}
-
-input {
-    width: 50vw;
-}
-
-input:nth-of-type(3) {
-    height: 200px;
-    text-align: top left;
-
-}
-
-.adminHeader a {
-    font-family: 'Karla-Regular', sans-serif;
-    color: aliceblue;
-    text-decoration: none;
-}
-
-.adminHeader a:hover {
-    text-decoration: underline;
+    color: indigo;
 }
 
 .adminMain {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 10px;
+}
+
+input {
+    width: 50vw;
+    color: indigo;
+    border: 2px solid indigo;
+    margin: 10px;
+    overflow-wrap: normal;
+}
+
+input[type=file] {
+    border: none;
+}
+
+input:nth-of-type(3) {
+    height: 200px;
+    text-align: top left;
+}
+
+.adminMain button {
+    font-family: 'Karla-Regular', sans-serif;
+    color: indigo;
+    background-color: white;
+    border: 2px solid indigo;
+    padding: 10px 20px;
+}
+
+.adminMain button:hover {
+    color: white;
+    background-color: indigo;
 }

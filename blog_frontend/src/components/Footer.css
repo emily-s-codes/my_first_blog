@@ -1,0 +1,12 @@
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 100px 0 20px 0;
+}
+
+footer p {
+    font-family: 'Karla-Light', sans-serif;
+    font-size: 10px;
+    color: indigo;
+}

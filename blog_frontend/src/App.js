@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Homepage from './pages/Homepage';
 import DetailPage from './pages/DetailPage';
 import Admin from './pages/Admin';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -17,11 +19,13 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <Navbar />
         <Routes>
           <Route path={"/"} element={<Homepage posts={posts} />} />
           <Route path={"/blog/:entry"} element={<DetailPage posts={posts} />} />
-          <Route path={"/admin"} element={<Admin posts={posts} setPosts={setPosts} />} />
+          <Route path={"/admin"} element={<Admin setPosts={setPosts} />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

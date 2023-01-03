@@ -1,7 +1,7 @@
 import "./NewPost.css"
 import { useState } from "react"
 
-const NewPost = ({ posts, setPosts }) => {
+const NewPost = ({ setPosts }) => {
     const [title, setTitle] = useState("")
     const [teaser, setTeaser] = useState("")
     const [content, setContent] = useState("")
@@ -25,9 +25,9 @@ const NewPost = ({ posts, setPosts }) => {
     }
     return (
         <main className="adminMain">
-            <h2>Write your new post:</h2>
-            <input type="text" placeholder="post title" name="title" onChange={(e) => setTitle(e.target.value)} />
-            <input type="text" placeholder="teaser text" name="teaser" onChange={(e) => setTeaser(e.target.value)} />
+            <h2>New post:</h2>
+            <input type="text" placeholder="post title" name="title" maxlength="20" onChange={(e) => setTitle(e.target.value)} />
+            <input type="text" placeholder="teaser text" name="teaser" maxlength="100" onChange={(e) => setTeaser(e.target.value)} />
             <input type="textarea" placeholder="post content" name="content" onChange={(e) => setContent(e.target.value)} />
             <input type="file" name="image" onChange={(e) => setImage(e.target.files[0])} />
             <button onClick={submitForm}>Publish</button>

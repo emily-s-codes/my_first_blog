@@ -1,6 +1,7 @@
 .postPreview h2 {
     font-family: 'Karla-Bold', sans-serif;
-    color: darkred;
+    color: indigo;
+    margin: 10px 0;
 }
 
 .postPreview p {
@@ -9,10 +10,10 @@
 
 .postPreview {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    height: 400px;
+    height: 300px;
     border-radius: 10px;
-    padding: 5px;
-    background-color: white;
+    padding: 10px;
+    overflow: hidden;
 }
 
 .postPreview:hover {
@@ -31,5 +32,5 @@
 
 .homeGrid a {
     text-decoration: none;
-    color: darkred;
+    color: indigo;
 }
