@@ -2,3 +2,45 @@
     background-color: seagreen;
     min-height: 100vh;
 }
+
+.detailPageMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detailPageWrapper img {
+    height: 40vh;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.detailPageWrapper p {
+    font-family: 'Karla-Regular', sans-serif;
+    color: aliceblue;
+}
+
+.detailHeader {
+    padding: 20px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.detailHeader h1,
+.detailPageMain h1 {
+    font-family: 'Karla-Bold', sans-serif;
+    color: aliceblue;
+}
+
+.detailHeader a {
+    text-decoration: none;
+    font-family: 'Karla-Regular', sans-serif;
+    color: aliceblue;
+}
+
+.detailHeader a:hover {
+    text-decoration: underline;
+}

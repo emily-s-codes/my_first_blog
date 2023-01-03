@@ -14,7 +14,7 @@ const NewPost = ({ posts, setPosts }) => {
         form.append('content', content)
         form.append('image', image)
 
-        fetch('http://localhost:9999/blog', {
+        fetch('http://localhost:9999/api/blog', {
             method: 'POST',
             body: form
         })
@@ -23,7 +23,7 @@ const NewPost = ({ posts, setPosts }) => {
 
         window.location.href = ('/')
     }
-    return (<>
+    return (
         <main className="adminMain">
             <h2>Write your new post:</h2>
             <input type="text" placeholder="post title" name="title" onChange={(e) => setTitle(e.target.value)} />
@@ -31,7 +31,7 @@ const NewPost = ({ posts, setPosts }) => {
             <input type="textarea" placeholder="post content" name="content" onChange={(e) => setContent(e.target.value)} />
             <input type="file" name="image" onChange={(e) => setImage(e.target.files[0])} />
             <button onClick={submitForm}>Publish</button>
-        </main></>);
+        </main>);
 }
 
 export default NewPost;

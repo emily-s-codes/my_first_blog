@@ -19,7 +19,7 @@ fs.readFile('./data.js', (err, data) => {
     blogPosts = JSON.parse(data)
 })
 
-app.post('/blog', upload.single('image'), (req, res) => {
+app.post('/api/blog', upload.single('image'), (req, res) => {
     console.log(req.body)
     const blogPost = {
         title: req.body.title,
@@ -32,7 +32,7 @@ app.post('/blog', upload.single('image'), (req, res) => {
     res.json(blogPosts)
 })
 
-app.get('/blog', (_, res) => {
+app.get('/api/blog', (_, res) => {
     res.json(blogPosts)
 })
 

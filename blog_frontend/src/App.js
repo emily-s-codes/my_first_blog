@@ -10,7 +10,7 @@ function App() {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:9999/blog')
+    fetch('http://localhost:9999/api/blog')
       .then(res => res.json())
       .then(data => setPosts(data))
   }, [])

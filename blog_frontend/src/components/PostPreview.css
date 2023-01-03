@@ -1,5 +1,6 @@
 .postPreview h2 {
     font-family: 'Karla-Bold', sans-serif;
+    color: darkred;
 }
 
 .postPreview p {
@@ -11,7 +12,7 @@
     height: 400px;
     border-radius: 10px;
     padding: 5px;
-
+    background-color: white;
 }
 
 .postPreview:hover {
