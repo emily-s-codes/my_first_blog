@@ -1,1 +1,1 @@
-[{"title":"post 1","teaser":"here we go again ","content":"next try","image":"public/9d648444244f40b52e218da9d512ae64"},{"id":"1","title":"post 2","teaser":"nice try","content":"trying to get id to be written into data file","image":"public/5438c75ed322fa4886d5dd0ec7dfc070"},{"id":"1","title":"post 3","teaser":"id passing works!","content":"everybody celebrate!","image":"public/6576f6232c0b0ea9fbb0e4668ed9ee27"}]
+[]

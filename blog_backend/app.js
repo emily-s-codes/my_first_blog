@@ -19,11 +19,9 @@ fs.readFile('./data.js', (err, data) => {
     blogPosts = JSON.parse(data)
 })
 
-
 app.post('/blog', upload.single('image'), (req, res) => {
     console.log(req.body)
     const blogPost = {
-        id: req.body.id,
         title: req.body.title,
         teaser: req.body.teaser,
         content: req.body.content,
