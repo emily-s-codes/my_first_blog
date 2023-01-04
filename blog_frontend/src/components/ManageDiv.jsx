@@ -1,26 +1,25 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./ManageDiv.css"
 
-const ManageDiv = (props) => {
-    // const deletePost = () => {
-    //     console.log('frontend delete run')
-    //     fetch(`http://localhost:9999/api/blog/${props.id}`, {
-    //         method: "DELETE",
-    //         headers: {
-    //             'content-type': "application/json"
-    //         }
-    //     })
-    //         .then(response => response.json())
-    //         .then(data => props.setPosts(data))
-    // }
+const ManageDiv = ({ id, title, deletePost, posts, setPosts }) => {
+    useEffect(() => {
+        fetch('http://localhost:9999/api/blog')
+            .then(response => response.json())
+            .then(data => setPosts(data))
+    }, [])
 
     return (<div className="manageDiv">
-        <p>{props.title}</p>
-        <Link to={`/blog/${props.id}`}>View Post</Link>
-        {/* onClick={deletePost} */}
-        <button >Delete Post</button>
-        <button>Edit Post</button>
+        <p>{title}</p>
+        <Link to={`/blog/${id}`}>View Post</Link>
+        <button onClick={deletePost}>Delete Post</button>
+        <Link to={`/admin/edit/${id}`}>Edit Post</Link>
     </div>);
 }
 
 export default ManageDiv;
+
+// DELETES FROM ARRAY POSTS, NOT FROM JSON, begs question: should delete be permanent, should there be a restore button?
+
+// this results in manage and home pages both still showing 'deleted' content, even though the state of posts should have been updated with setPosts after deleting. should there be a higher level re-render?
+// ^moved function to app.js

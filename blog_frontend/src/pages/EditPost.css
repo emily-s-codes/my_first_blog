@@ -1,0 +1,28 @@
+.editPostsWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.afterEditLinks {
+    display: flex;
+    margin: 10px;
+    gap: 20px;
+}
+
+.afterEditLinks a {
+    font-family: 'Karla-Regular', sans-serif;
+    color: indigo;
+    background-color: white;
+    border: 2px solid indigo;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.afterEditLinks a:hover {
+    color: white;
+    background-color: indigo;
+}
+
+.afterEditLinks a:active {
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
